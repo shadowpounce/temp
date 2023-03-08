@@ -1,0 +1,14 @@
+.marquee {
+  display: flex;
+}
+.marquee_item {
+  + .marquee_item {
+    margin-left: 16.7px;
+  }
+}
+.marquee_item_container {
+  padding-block: 8.35px;
+  video {
+    z-index: 9;
+  }
+}

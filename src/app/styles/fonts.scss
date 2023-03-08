@@ -1,0 +1,4 @@
+@include fontCreate($plusJakarta, 400, '/fonts/PlusJakartaDisplay-Regular', false);
+@include fontCreate($clashDisplay, 400, '/fonts/ClashDisplayRegular', false);
+@include fontCreate($clashDisplay, 500, '/fonts/ClashDisplayMedium', false);
+@include fontCreate($clashDisplay, 700, '/fonts/ClashDisplayBold', false);

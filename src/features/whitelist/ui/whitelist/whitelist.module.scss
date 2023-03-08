@@ -1,0 +1,117 @@
+.whitelist {
+  display: flex;
+  background: rgba(220, 220, 220, 0.8);
+}
+.whitelist_modal {
+  margin-left: auto;
+  max-width: 700px;
+  width: 100%;
+  min-height: 100vh;
+  background: $green-light;
+  border-left: 1px solid #000;
+  border-radius: 25px 0 0 25px;
+  padding: 55px 55px 50px;
+  flex-shrink: 0;
+
+  display: flex;
+  flex-direction: column;
+}
+.whitelist_header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.whitelist_title {
+  font-size: 76px;
+}
+.whitelist_closeBtn {
+  margin-left: 15px;
+  width: 48px;
+  height: 48px;
+  flex-shrink: 0;
+  border-radius: 50%;
+  border: 1.5px solid #000000;
+  position: relative;
+
+  svg {
+    width: calc(100% / 3);
+    flex-shrink: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    [data-stroke] {
+      stroke: #000;
+    }
+  }
+
+  &:first-child:last-child {
+    margin-left: auto;
+  }
+}
+@media (max-width: $laptop_big) {
+  .whitelist_modal {
+    max-width: 620px;
+    padding-block: 35px;
+  }
+  .whitelist_title {
+    font-size: 65px;
+  }
+}
+@media (max-width: $tablet_small){
+  .whitelist_modal {
+    max-width: 100%;
+    border: 1px solid #000000;;
+    border-radius: 44px;
+    padding-inline: 40px;
+  }
+}
+@media (max-width: $mobile_big){
+  .whitelist_modal {
+    padding: 40px 30px;
+  }
+  .whitelist_title {
+    font-size: 46px;
+  }
+}
+@media (max-width: 414px){
+  .whitelist_modal {
+    padding: 30px 20px
+  }
+  .whitelist_title {
+    font-size: 36px;
+  }
+  .whitelist_closeBtn {
+    width: 40px;
+    height: 40px;
+  }
+}
+// Animation
+.enter {
+  background: transparent;
+  .whitelist_modal {
+    transform: translateX(100%);
+  }
+}
+.enterActive {
+  background: rgba(220, 220, 220, 0.8);
+  transition: background 0.35s ease-in-out;
+  .whitelist_modal {
+    transform: translateX(0);
+    transition: transform 0.35s ease-in-out;
+  }
+}
+.exit {
+  background: rgba(220, 220, 220, 0.8);
+  .whitelist_modal {
+    transform: translateX(0);
+  }
+}
+.exitActive {
+  background: transparent;
+  transition: background 0.35s ease-in-out;
+  .whitelist_modal {
+    transform: translateX(100%);
+    transition: transform 0.35s ease-in-out;
+  }
+}

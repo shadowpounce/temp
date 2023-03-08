@@ -1,0 +1,85 @@
+.company {
+  min-height: 100vh;
+  background: $green-light;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  padding-block: 100px;
+  position: relative;
+  overflow-y: hidden;
+  z-index: 12;
+}
+.company_marquee {
+  position: relative;
+  z-index: 1;
+  &_container {
+    display: flex;
+  }
+  &_item {
+    display: flex;
+    align-items: center;
+    margin-left: 16.5px;
+    font: 700 107px/0.88 $clashDisplay;
+    color: transparent;
+    -webkit-text-stroke: 1px #000;
+    text-transform: uppercase;
+    user-select: none;
+    cursor: default;
+
+    &::before {
+      content: '';
+      display: inline-block;
+      vertical-align: middle;
+      width: 0.57em;
+      height: 0.57em;
+      margin-right: 16.5px;
+
+      background: transparent;
+      background-image: url('/img/company/star.svg');
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+  }
+  &_item + &_item {
+  }
+}
+.company_device {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+}
+@media (max-width: $tablet_big) {
+  .company_marquee {
+    &_item {
+      font-size: 90px;
+    }
+  }
+}
+@media (max-width: $tablet) {
+  .company {
+    align-items: center;
+    flex-direction: column;
+  }
+  .company_device {
+    margin-top: 75px;
+    position: relative;
+    left: auto;
+    top: auto;
+    transform: translate(0);
+  }
+}
+@media (max-width: $tablet_small) {
+  .company {
+    padding-block: 60px;
+  }
+  .company_marquee {
+    margin-top: 40px;
+
+    &_item {
+      font-size: 58px;
+    }
+  }
+}

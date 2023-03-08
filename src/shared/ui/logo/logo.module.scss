@@ -1,0 +1,7 @@
+.logo {
+  width: 80px;
+  flex-shrink: 0;
+  [data-fill] {
+    fill: #000;
+  }
+}

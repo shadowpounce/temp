@@ -1,0 +1,1 @@
+export { withWhitelist } from './withWhitelist';

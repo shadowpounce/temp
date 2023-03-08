@@ -1,0 +1,10 @@
+.title {
+  font: 500 70px/.91 $clashDisplay;
+  color: #000;
+}
+
+@media (max-width: $mobile_small) {
+  .title {
+    font-size: 36px;
+  }
+}

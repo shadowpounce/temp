@@ -1,0 +1,32 @@
+.lines {
+}
+.lines_item {
+  position: relative;
+
+  &[data-animate] {
+    &:nth-of-type(1) {
+      stroke-dasharray: 2209;
+      stroke-dashoffset: 2209;
+    }
+    &:nth-of-type(2) {
+      stroke-dasharray: 2025;
+      stroke-dashoffset: 2025;
+    }
+    &:nth-of-type(3) {
+      stroke-dasharray: 1883;
+      stroke-dashoffset: 1883;
+    }
+    &:nth-of-type(4) {
+      stroke-dasharray: 120 2089;
+      stroke-dashoffset: 2209;
+    }
+    &:nth-of-type(5) {
+      stroke-dasharray: 120 1905;
+      stroke-dashoffset: 2025;
+    }
+    &:nth-of-type(6) {
+      stroke-dasharray: 120 1763;
+      stroke-dashoffset: 1883;
+    }
+  }
+}

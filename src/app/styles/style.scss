@@ -1,0 +1,53 @@
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+body {
+  font: 400 16px/1 $clashDisplay;
+  background: #fff;
+}
+
+@media screen and (min-width: 992px) {
+  ::-webkit-scrollbar {
+    width: 10px;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #000;
+    border-radius: 8px;
+  }
+  ::-webkit-scrollbar-track {
+    background: #fff;
+  }
+}
+
+.container {
+  max-width: $container + ($padding * 2);
+  width: 100%;
+  padding: 0 $padding;
+  margin: 0 auto;
+}
+
+.img-cover {
+  @include imgCover;
+}
+
+@media (max-width: 1180px) {
+  .container {
+    padding: 0 $padding_tablet;
+  }
+}
+
+@media (max-width: 991px) {
+  .container {
+    padding: 0 $padding_mobile;
+  }
+}

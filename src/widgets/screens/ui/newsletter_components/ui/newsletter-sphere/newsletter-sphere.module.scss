@@ -1,0 +1,27 @@
+.sphere {
+  width: 320px;
+  height: 323px;
+}
+.sphere_container {
+  width: 100%;
+  height: 100%;
+  // transition: transform 0.3s linear;
+  transition: transform 0s linear;
+}
+@media (min-width: $laptop){
+  .sphere {
+    width: 368px;
+    height: 371.45px;
+  }
+}
+@media (max-width: $tablet_big){
+  .sphere {
+    width: 280px;
+    height: 282px;
+  }
+}
+@media (max-width: $tablet){
+  .sphere {
+    display: none;
+  }
+}

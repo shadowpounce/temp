@@ -1,0 +1,140 @@
+.form {
+  margin-top: 26px;
+}
+.form_row {
+  display: flex;
+  justify-content: space-between;
+}
+.form_col {
+  flex: 0 0 calc(50% - 6px);
+}
+.form_textarea {
+  margin-top: 8px;
+  [data-class='field'] {
+    border-radius: 30px;
+    padding: 0 27px;
+  }
+  [data-class='input'] {
+    min-height: 105px;
+    max-height: 140px;
+    padding-block: 17px;
+  }
+}
+.form_subtitle {
+  margin-top: 21px;
+  font: 400 20px/1.1 $plusJakarta;
+  text-transform: capitalize;
+  color: #000;
+}
+.form_hobby_list {
+  margin: 23px -2px 0;
+  display: flex;
+  flex-wrap: wrap;
+}
+.form_hobby_item {
+  margin: 3px 2px 0;
+  background: #ffffff;
+  border: 1px solid #000000;
+  border-radius: 140px;
+  padding: 16px 27px;
+  font: 400 18px/1.25 $plusJakarta;
+  text-transform: capitalize;
+  color: #000;
+  cursor: pointer;
+  min-width: 106px;
+  text-align: center;
+
+  &[data-active='true'] {
+    background: #000;
+    color: #fff;
+  }
+}
+.form_inform {
+  margin-top: 20px;
+  font: 400 16px/1.5 $plusJakarta;
+  color: #000;
+  text-transform: capitalize;
+}
+.form_submit {
+  margin-top: 23px;
+  background: #000;
+  span {
+    color: #fff;
+  }
+  svg [data-stroke] {
+    stroke: #fff;
+  }
+}
+@media (max-width: $laptop_big) {
+  .form_subtitle {
+    margin-top: 15px;
+    font-size: 18px;
+  }
+  .form_hobby_item {
+    padding: 14px 24px;
+    font-size: 16px;
+  }
+  .form_inform {
+    margin-top: 15px;
+    font-size: 15px;
+  }
+  .form_submit {
+  }
+}
+@media (max-width: $mobile_big) {
+  .form {
+    margin-top: 48px;
+  }
+  .form_row {
+    flex-direction: column;
+  }
+  .form_col {
+    flex: 0 0 auto;
+
+    + .form_col {
+      margin-top: 14px;
+    }
+  }
+  .form_textarea {
+    margin-top: 14px;
+  }
+  .form_hobby_item {
+    padding: 14px;
+    font-size: 15px;
+    border-radius: 86px;
+    min-width: 97px;
+  }
+  .form_inform {
+    font-size: 14px;
+  }
+  .form_textarea {
+    [data-class='input'] {
+      min-height: 170px;
+      max-height: 170px;
+    }
+  }
+  .form_submit {
+    width: 100%;
+    justify-content: space-between;
+  }
+}
+@media (max-width: $mobile) {
+  .form_hobby_item {
+    padding: 15.5px 15px;
+    font-size: 12px;
+    border-radius: 86px;
+  }
+}
+@media (max-width: 414px){
+  .form {
+    margin-top: 30px;
+  }
+  .form_input {
+    [data-class="input"] {
+      min-height: 50px;
+    }
+  }
+  .form_hobby_item {
+    padding: 12px;
+  }
+}

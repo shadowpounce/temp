@@ -1,0 +1,30 @@
+.tiktok {
+  width: 201px;
+  height: 395px;
+  border-radius: 16px;
+}
+.tiktok_video {
+  position: relative;
+  z-index: 1;
+}
+.tiktok_image {
+  position: absolute;
+  z-index: 2;
+  left: 0;
+  top: 0;
+  pointer-events: none;
+}
+@media (max-width: $laptop){
+  .tiktok {
+    width: calcSize(201px, 80);
+    height: calcSize(395px, 80);
+    border-radius: calcSize(16px, 80);
+  }
+}
+@media (max-width: $tablet) {
+  .tiktok {
+    width: 106px;
+    height: 207px;
+    border-radius: 9.5px;
+  }
+}

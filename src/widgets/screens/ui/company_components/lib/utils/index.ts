@@ -1,0 +1,1 @@
+export { getCompanyData, type CompanyType } from './getCompanyData';

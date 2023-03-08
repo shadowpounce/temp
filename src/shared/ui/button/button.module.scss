@@ -1,0 +1,31 @@
+.button {
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  padding: 1.06em 1.82em;
+  background: $green-light;
+  border: 1px solid #000000;
+  border-radius: 7em;
+}
+.button_text {
+  font: 500 1em/1.25 $clashDisplay;
+  color: #000;
+}
+.button_arrow {
+  width: 1.1em;
+  flex-shrink: 0;
+  margin-left: 0.8em;
+  [data-stroke] {
+    stroke: #000;
+  }
+}
+@media (max-width: $laptop){
+  .button {
+    font-size: 18px;
+  }
+}
+@media (max-width: $mobile_small){
+  .button {
+    font-size: 15px;
+  }
+}

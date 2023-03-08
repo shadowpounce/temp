@@ -1,0 +1,57 @@
+.modal {
+  position: fixed;
+  inset: 0;
+  z-index: $zIndex_modal;
+
+  display: flex;
+  flex-direction: column;
+  overflow: hidden auto;
+
+  &_default {
+    background: rgba(82, 82, 82, 0.5);
+    backdrop-filter: blur(12px);
+  }
+}
+
+.enter {
+  backdrop-filter: blur(0);
+  background: transparent;
+
+  > * {
+    opacity: 0;
+    transform: translateY(25px);
+  }
+}
+.enterActive {
+  background: rgba(82, 82, 82, 0.5);
+  backdrop-filter: blur(17px);
+  transition: 0.35s ease-in-out;
+  transition-property: backdrop-filter, background;
+
+  > * {
+    opacity: 1;
+    transform: translateY(0);
+    transition: transform 0.25s ease-in-out, opacity 0.35s ease-in-out;
+  }
+}
+.exit {
+  background: rgba(82, 82, 82, 0.5);
+  backdrop-filter: blur(17px);
+
+  > * {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.exitActive {
+  backdrop-filter: blur(0);
+  background: transparent;
+  transition: 0.35s ease-in-out;
+  transition-property: backdrop-filter, background;
+
+  > * {
+    opacity: 0;
+    transform: translateY(25px);
+    transition: transform 0.25s ease-in-out, opacity 0.35s ease-in-out;
+  }
+}

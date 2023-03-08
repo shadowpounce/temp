@@ -1,0 +1,1 @@
+export { withRoutes } from './withRoutes';

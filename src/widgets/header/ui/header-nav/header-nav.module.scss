@@ -1,0 +1,21 @@
+.nav {
+  display: flex;
+}
+.nav_item {
+  font: 400 18px/1.24 $plusJakarta;
+  color: #000;
+  text-transform: capitalize;
+
+  + .nav_item {
+    margin-left: 43px;
+  } 
+}
+
+@media (max-width: $tablet_big){
+  .nav_item {
+    font-size: 16px;
+    + .nav_item {
+      margin-left: 25px;
+    }
+  }
+}

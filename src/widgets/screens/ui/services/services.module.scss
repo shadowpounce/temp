@@ -1,0 +1,119 @@
+.services {
+  min-height: 100vh;
+  padding: 24px 15px;
+  display: flex;
+  flex-direction: column;
+}
+.services_container {
+  max-width: 1410px;
+  width: 100%;
+  margin-inline: auto;
+  border: 1px solid #000000;
+  border-radius: 40px;
+  flex-grow: 1;
+  overflow: hidden;
+  background: transparent;
+  background-image: url('/img/services/background.png');
+  background-size: 67px 70px;
+  background-repeat: repeat;
+  background-position: center bottom;
+  display: flex;
+  flex-direction: column;
+}
+.services_title {
+  font-size: 50px;
+  padding: 53px 75px 0;
+}
+.services_graph {
+  position: relative;
+  padding-top: 16px;
+  margin-block: auto -2px;
+  width: calc(100% + 300px);
+  margin-left: -150px;
+}
+.services_product {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  transform-origin: bottom right;
+
+  &1 {
+    [data-class='button'] {
+      right: 0;
+      left: auto;
+      transform: translate(50%, 50%);
+    }
+  }
+  &2 {
+  }
+}
+.services_lines {
+  width: 100%;
+  min-height: 572px;
+}
+@media (max-width: $laptop) {
+  .services_title {
+    font-size: 45px;
+    padding-inline: 40px;
+  }
+}
+@media (max-width: $tablet_big) {
+  .services_title {
+    font-size: 38px;
+    padding-inline: 25px;
+  }
+  .services_product {
+    font-size: 14px;
+    padding-bottom: 25px;
+    &1,
+    &2 {
+      [data-class='button'] {
+        left: 50%;
+        right: auto;
+        transform: translate(-50%, 50%);
+      }
+    }
+  }
+}
+@media (max-width: $tablet) {
+  .services_container {
+    border-radius: 32px;
+  }
+  .services_title {
+    font-size: 34px;
+  }
+  .services_lines {
+    min-height: 572px;
+  }
+  .services_graph {
+    width: calc(100% + 140px);
+    margin-left: -70px;
+  }
+  .services_product {
+    font-size: 12px;
+  }
+}
+@media (max-width: 414px){
+  .services_title {
+    font-size: 26px;
+    padding-inline: 15px;
+  }
+  .services_lines {
+    min-height: 520px;
+  }
+}
+@media (max-width: $mobile_small){
+  .services_container {
+    border-radius: 20px;
+  }
+  .services_title {
+    padding-top: 30px;
+  }
+  .services_product {
+    font-size: 10px;
+  }
+  .services_lines {
+    min-height: 475px;
+  }
+}
