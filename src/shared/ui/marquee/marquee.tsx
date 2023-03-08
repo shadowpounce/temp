@@ -58,8 +58,7 @@ const Marquee: React.FC<MarqueeProps> = ({
 
   useEffect(() => {
     const transitionVideo = document.querySelector(`#transition-video video`);
-    const aboutVideo = document.querySelector('#about video');
-    // transitionVideo && console.log(transitionVideo);
+    const aboutVideo = document.querySelector('#about video') as HTMLElement;
 
     window.addEventListener('scroll', () => {
       transitionVideo?.classList.add(clsx(styles.transition_video));
