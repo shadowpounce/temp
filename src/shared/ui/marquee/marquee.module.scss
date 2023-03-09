@@ -32,7 +32,8 @@
   left: 0 !important;
   right: 0 !important;
   transform-origin: center;
-  z-index: 13;
+  z-index: 9999;
+
   transition: all 1.5s ease !important;
   animation: transitionVideo 2s forwards ease;
 }
@@ -40,7 +41,7 @@
 @media (max-width: 1660px) {
   @keyframes transitionVideo {
     50% {
-      position: relative;
+      position: fixed;
       width: 100vw;
       height: 100vh;
       transform: translateX(-80%) translateY(250px) rotate(28deg);
@@ -48,7 +49,7 @@
     }
 
     100% {
-      position: relative;
+      position: fixed;
       width: 100vw;
       height: 100vh;
       transform: translateX(-80%) translateY(250px) rotate(28deg);
@@ -60,15 +61,15 @@
 @media (min-width: 1660px) {
   @keyframes transitionVideo {
     50% {
-      position: relative;
+      position: fixed;
       width: 100vw;
       height: 100vh;
-      transform: translateX(-90%) translateY(550px) rotate(28deg);
+      transform: translateX(-90%) translateY(600px) rotate(28deg);
       opacity: 1;
     }
 
     100% {
-      position: relative;
+      position: fixed;
       width: 100vw;
       height: 100vh;
       transform: translateX(-90%) translateY(550px) rotate(28deg);

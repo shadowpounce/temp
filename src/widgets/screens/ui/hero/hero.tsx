@@ -26,7 +26,6 @@ export const Hero: React.FC = () => {
           </p>
         </div>
       </div>
-      <HeroMarquee className={styles.hero_marquee} />
     </section>
   );
 };

@@ -17,7 +17,7 @@ export const CompanyDevice: React.FC<CompanyDeviceProps> = ({
   data,
 }) => {
   return (
-    <div id="device" className={clsx(styles.device, className)}>
+    <div className={clsx(styles.device, className)}>
       <div className={styles.device_frame}>
         {/* <video
           src={videoSrc}

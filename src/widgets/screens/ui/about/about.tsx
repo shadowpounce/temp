@@ -12,15 +12,7 @@ export const About: React.FC = () => {
           the <span className={styles.about_title_black}>lowest</span> prices.
         </Title>
       </div>
-      <video
-        className={`img-cover ${styles.about_video}`}
-        id="about-video"
-        src="/video/hero/v-1.mp4"
-        playsInline
-        autoPlay
-        muted
-        loop
-      />
+      
     </section>
   );
 };

@@ -28,7 +28,7 @@ export const Services = ({ fullpage }) => {
   });
 
   useEffect(() => {
-    if (fullpage.direction === 'down' && fullpage.origin.index === 2) {
+    if (fullpage) {
       if (!animated) {
         runPhase('thumb')
           .runPhase('line')

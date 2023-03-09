@@ -27,6 +27,7 @@
   object-fit: cover;
   object-position: center;
   border-radius: inherit;
+  z-index: -1;
 }
 
 @mixin textOverflowVertical($lines: 1) {
@@ -44,7 +45,7 @@
 }
 
 @mixin textGradient($color) {
-  background: $color;;
+  background: $color;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
