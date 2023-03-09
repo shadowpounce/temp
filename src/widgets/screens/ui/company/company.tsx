@@ -12,26 +12,28 @@ export const Company: React.FC = () => {
   useProductAnimate('[data-company]', initialData, setCompanyActive);
 
   return (
-    <section className={`${styles.company} section`} id="company">
-      <Marquee duration={10000} direction="left" className={styles.company_marquee}>
-        <div className={styles.company_marquee_container}>
-          {initialData.map((company, id) => (
-            <p
-              className={styles.company_marquee_item}
-              key={company.name}
-              data-company={company.name}
-            >
-              {company.name}
-            </p>
-          ))}
-        </div>
-      </Marquee>
+    <>
       <CompanyDevice
         data={initialData}
         className={styles.company_device}
         company={companyActive}
         videoSrc="/video/hero/v-2.mp4"
       />
-    </section>
+      <section className={`${styles.company} section`} id="company">
+        <Marquee duration={10000} direction="left" className={styles.company_marquee}>
+          <div className={styles.company_marquee_container}>
+            {initialData.map((company, id) => (
+              <p
+                className={styles.company_marquee_item}
+                key={company.name}
+                data-company={company.name}
+              >
+                {company.name}
+              </p>
+            ))}
+          </div>
+        </Marquee>
+      </section>
+    </>
   );
 };

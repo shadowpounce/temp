@@ -52,6 +52,7 @@ body {
 #company .fp-overflow {
   overflow-x: hidden !important;
   overflow-y: hidden !important;
+  z-index: 2;
 }
 
 #hero {

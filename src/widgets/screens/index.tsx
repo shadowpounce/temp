@@ -21,7 +21,6 @@ export const Screens = () => {
     const transitionVideo = document.querySelector(`#transition-video video`) as HTMLElement;
     const aboutVideo = document.querySelector('#about-video') as HTMLVideoElement;
     const aboutScreen = document.querySelector('#about') as HTMLElement;
-    const device = document.querySelector('#device') as HTMLElement;
     const deviceVideo = document.querySelector('#device-video') as HTMLElement;
 
     if (origin.index === 0) {
@@ -79,6 +78,8 @@ export const Screens = () => {
           <ReactFullpage.Wrapper>
             <Hero />
             <HeroMarquee className={heroStyles.hero_marquee} />
+            <About />
+            <Company />
             <video
               className={`img-cover ${aboutStyles.about_video}`}
               id="about-video"
@@ -88,8 +89,6 @@ export const Screens = () => {
               muted
               loop
             />
-            <About />
-            <Company />
             <Services fullpage={servicesSection} />
             <Newsletter />
           </ReactFullpage.Wrapper>

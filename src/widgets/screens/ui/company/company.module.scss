@@ -5,7 +5,7 @@
   align-items: center;
   padding-block: 100px;
   position: relative;
-  z-index: 0;
+  z-index: 1;
 }
 .company_marquee {
   position: relative;
@@ -46,11 +46,13 @@
   }
 }
 .company_device {
-  position: absolute;
-  top: 50%;
+  position: fixed;
+  top: 250vh;
   left: 50%;
   transform: translate(-50%, -50%);
-  z-index: 999;
+  z-index: 3;
+  // opacity: 0;
+  transition: opacity 0.5s ease;
 }
 @media (max-width: $tablet_big) {
   .company_marquee {
