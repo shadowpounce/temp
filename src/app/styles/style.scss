@@ -40,6 +40,24 @@ body {
   @include imgCover;
 }
 
+.fp-watermark {
+  display: none !important;
+}
+
+.fp-overflow {
+  height: 100%;
+  width: 100%;
+}
+
+#company .fp-overflow {
+  overflow-x: hidden !important;
+  overflow-y: hidden !important;
+}
+
+#hero {
+  overflow: unset !important;
+}
+
 @media (max-width: 1180px) {
   .container {
     padding: 0 $padding_tablet;

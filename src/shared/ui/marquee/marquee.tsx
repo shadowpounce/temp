@@ -1,5 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react';
 import clsx from 'clsx';
+import aboutStyles from '../../../widgets/screens/ui/about/about.module.scss';
 import styles from './marquee.module.scss';
 
 interface MarqueeProps {
@@ -18,7 +19,6 @@ const Marquee: React.FC<MarqueeProps> = ({
   className,
 }) => {
   const [repeatCount, setRepeatCount] = useState(2);
-  const [transitionVideo, setTransitionVideo] = useState('123');
   const marqueeRef = useRef<HTMLDivElement>(null);
 
   const handleCalcWidth = () => {
@@ -55,18 +55,6 @@ const Marquee: React.FC<MarqueeProps> = ({
     window.addEventListener('resize', handleCalcWidth);
     return () => window.removeEventListener('resize', handleCalcWidth);
   });
-
-  useEffect(() => {
-    const transitionVideo = document.querySelector(`#transition-video video`);
-    const aboutVideo = document.querySelector('#about video') as HTMLElement;
-
-    window.addEventListener('scroll', () => {
-      transitionVideo?.classList.add(clsx(styles.transition_video));
-      setTimeout(() => {
-        aboutVideo.style.opacity = `1`;
-      }, 400);
-    });
-  }, [repeatCount]);
 
   useEffect(() => {
     handleCalcWidth();

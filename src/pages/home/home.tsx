@@ -6,7 +6,6 @@ import { Screens } from 'widgets/screens';
 export const Home: React.FC = withWhitelist(() => {
   return (
     <>
-      <Header />
       <Screens />
       <Whitelist />
     </>

@@ -13,7 +13,7 @@ export const Newsletter: React.FC = () => {
 
   return (
     <section
-      className={styles.newsletter}
+      className={`${styles.newsletter} section`}
       id="newsletter"
       onMouseMove={onMouseMove}
       onMouseLeave={onMouseLeave}

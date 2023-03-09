@@ -17,7 +17,7 @@ const defaultParams: UseProductParams = {
   from: 0,
   to: 1,
   side: 'left',
-  duration: 1200
+  duration: 1200,
 };
 
 export const useProductAnimate = (
@@ -45,7 +45,7 @@ export const useProductAnimate = (
     const isTabletView = window.innerWidth <= 991; // Remove in ft
     let { dx, dy, totalLength } = getPathData(path);
     let min = params.from! * totalLength;
-    totalLength = totalLength * params.to!
+    totalLength = totalLength * params.to!;
 
     const draw = (progress: number) => {
       const point = path.getPointAtLength(min + (totalLength - min) * progress);
@@ -63,7 +63,9 @@ export const useProductAnimate = (
 
   const update = () => {
     const productEl = productRef.current;
-    const path = document.getElementById(pathId.replace('#', '')) as SVGPathElement | null;
+    const path = document.getElementById(
+      pathId.replace('#', '')
+    ) as unknown as SVGPathElement | null;
     if (!productEl || !path) return;
 
     const { draw } = create(productEl, path);

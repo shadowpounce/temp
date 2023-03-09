@@ -1,5 +1,5 @@
 export const getPathData = (path: SVGPathElement) => {
-  const parent = path.parentElement as SVGSVGElement | null;
+  const parent = path.parentElement as unknown as SVGSVGElement | null;
   if (!parent) {
     return { dx: 0, dy: 0, totalLength: 0 };
   }

@@ -17,9 +17,17 @@ export const CompanyDevice: React.FC<CompanyDeviceProps> = ({
   data,
 }) => {
   return (
-    <div className={clsx(styles.device, className)}>
+    <div id="device" className={clsx(styles.device, className)}>
       <div className={styles.device_frame}>
-        <video src={videoSrc} className="img-cover" playsInline autoPlay muted loop />
+        {/* <video
+          src={videoSrc}
+          id="device-video"
+          className="img-cover"
+          playsInline
+          autoPlay
+          muted
+          loop
+        /> */}
         <div className={styles.device_camera} />
         <p className={styles.device_offer}>
           {data.map((com) => (

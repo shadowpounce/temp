@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { ProductCard } from 'entities/product';
 import Title from 'shared/ui/title/title';
 import {
@@ -10,33 +10,39 @@ import {
 } from '../services_components';
 import styles from './services.module.scss';
 
-export const Services: React.FC = () => {
+export const Services = ({ fullpage }) => {
+  const [animated, setAnimted] = useState(false);
   const { addPhase, runPhase } = usePhases();
   const linesRef = useLineAnimate(addPhase);
   const productRef1 = useProductAnimate('path1', addPhase, {
-    from: 0.1, 
+    from: 0.1,
     to: 0.33,
     name: 'product1',
-    side: 'left'
+    side: 'left',
   });
   const productRef2 = useProductAnimate('path1', addPhase, {
-    from: 0.5, 
+    from: 0.5,
     to: 0.8,
     name: 'product2',
-    side: 'right'
+    side: 'right',
   });
 
-  const containerRef = useScroll(() => {
-    runPhase('thumb')
-      .runPhase('line')
-      .delay(2000)
-      .runPhase('product1')
-      .delay(2150)
-      .runPhase('product2');
-  }); // Simple scroll cheker
+  useEffect(() => {
+    if (fullpage.direction === 'down' && fullpage.origin.index === 2) {
+      if (!animated) {
+        runPhase('thumb')
+          .runPhase('line')
+          .delay(2000)
+          .runPhase('product1')
+          .delay(2150)
+          .runPhase('product2');
+        setAnimted(true);
+      }
+    }
+  }, [fullpage]);
 
   return (
-    <section id="services" className={styles.services} ref={containerRef}>
+    <section id="services" className={`${styles.services} section`}>
       <div className={styles.services_container}>
         <Title className={styles.services_title}>
           Other monitoring services of advertising systems show products that already have passed

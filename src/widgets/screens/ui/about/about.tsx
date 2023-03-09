@@ -4,15 +4,7 @@ import styles from './about.module.scss';
 
 export const About: React.FC = () => {
   return (
-    <section className={styles.about} id="about">
-      <video
-        className={`img-cover ${styles.about_video}`}
-        src="/video/hero/v-1.mp4"
-        playsInline
-        autoPlay
-        muted
-        loop
-      />
+    <section className={`${styles.about} section`} id="about">
       <div className="container">
         <Title className={styles.about_title}>
           AI understands which products are gaining{' '}
@@ -20,6 +12,15 @@ export const About: React.FC = () => {
           the <span className={styles.about_title_black}>lowest</span> prices.
         </Title>
       </div>
+      <video
+        className={`img-cover ${styles.about_video}`}
+        id="about-video"
+        src="/video/hero/v-1.mp4"
+        playsInline
+        autoPlay
+        muted
+        loop
+      />
     </section>
   );
 };

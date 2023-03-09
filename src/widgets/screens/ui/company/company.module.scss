@@ -3,15 +3,16 @@
   background: $green-light;
   display: flex;
   align-items: center;
-  overflow: hidden;
   padding-block: 100px;
   position: relative;
-  overflow-y: hidden;
-  z-index: 12;
+  z-index: -1;
 }
 .company_marquee {
   position: relative;
   z-index: 1;
+  top: 50%;
+  translate: 0 -50%;
+
   &_container {
     display: flex;
   }
@@ -49,7 +50,7 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  z-index: 2;
+  z-index: 1;
 }
 @media (max-width: $tablet_big) {
   .company_marquee {

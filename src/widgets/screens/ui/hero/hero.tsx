@@ -3,13 +3,15 @@ import clsx from 'clsx';
 import { useWhitelist } from 'features/whitelist';
 import Button from 'shared/ui/button/button';
 import Title from 'shared/ui/title/title';
+import { Header } from 'widgets/header';
 import { HeroMarquee } from '../hero_components';
 import styles from './hero.module.scss';
 
 export const Hero: React.FC = () => {
   const { setActive } = useWhitelist();
   return (
-    <section className={styles.hero} id="hero">
+    <section className={`${styles.hero} section`} id="hero">
+      <Header />
       <div className={clsx('container', styles.hero_container)}>
         <Title level="h1" className={styles.hero_title}>
           AI Spotlights Trending Products Among Billion Posts On Social Media
