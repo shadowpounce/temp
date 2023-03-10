@@ -7,6 +7,7 @@ import styles from './hero-marquee.module.scss';
 
 interface HeroMarqueeProps {
   className?: string;
+  ref?: string;
 }
 
 export const HeroMarquee: React.FC<HeroMarqueeProps> = ({ className }) => {
