@@ -27,7 +27,30 @@
 
 .marquee_item {
   flex-shrink: 0;
-  transition: opacity 0.2s ease;
+  transition: 0.5s ease !important;
+  transition-property: opacity, transform;
+
+  @media (min-width: 1600px) {
+    &.back {
+      video {
+        border-radius: 0;
+      }
+
+      animation-play-state: paused;
+      transform: translateY(-5.5%) !important;
+    }
+  }
+
+  @media (max-width: 1600px) {
+    &.back {
+      video {
+        border-radius: 0;
+      }
+
+      animation-play-state: paused;
+      transform: translateY(-49.5%) !important;
+    }
+  }
 }
 
 .transition_video {
@@ -51,16 +74,14 @@
       position: fixed;
       width: 100vw;
       height: 100vh;
-      transform: translateX(-80%) translateY(250px) rotate(30deg);
+      transform: translateX(-80%) rotate(30deg);
     }
 
     100% {
       position: fixed;
       width: 100vw;
       height: 100vh;
-      transform: translateX(-80%) translateY(250px) rotate(30deg);
-      // opacity: 0;
-      // z-index: -999;
+      transform: translateX(-80%) rotate(30deg);
     }
   }
 }
@@ -71,17 +92,14 @@
       position: fixed;
       width: 100vw;
       height: 100vh;
-      transform: translateX(-90%) translateY(600px) rotate(30deg);
-      // opacity: 1;
+      transform: translateX(-90%) rotate(30deg);
     }
 
     100% {
       position: fixed;
       width: 100vw;
       height: 100vh;
-      transform: translateX(-90%) translateY(550px) rotate(30deg);
-      // opacity: 0;
-      // z-index: -999;
+      transform: translateX(-90%) rotate(30deg);
     }
   }
 }

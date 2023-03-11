@@ -23,12 +23,23 @@ export const Screens = () => {
 
   const onLeave = (origin: Item, destination: Item, direction: string) => {
     const transitionVideo = document.querySelector(`#transition-video video`) as HTMLElement;
+    const marqueeBox = transitionVideo.closest('#transition-video') as HTMLElement;
     const aboutVideo = document.querySelector('#about-video') as HTMLVideoElement;
     const deviceFrame = document.querySelector('#device') as HTMLElement;
 
     if (origin.index === 0) {
       if (direction === 'down') {
         console.log('add');
+
+        transitionVideo
+          .closest(`.${marqueeStyles.marquee_wrapper}`)
+          .querySelectorAll<HTMLElement>(`.${marqueeStyles.marquee_item}`)
+          .forEach((item) => {
+            item.classList.add(clsx(marqueeStyles.back));
+          });
+
+        marqueeBox.style.transform = `translateY(0px)`;
+
         transitionVideo?.classList.add(clsx(marqueeStyles.transition_video));
       }
 
