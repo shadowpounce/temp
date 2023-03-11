@@ -40,6 +40,8 @@ export const Screens = () => {
 
         marqueeBox.style.transform = `translateY(0px)`;
 
+        // return false;
+
         transitionVideo?.classList.add(clsx(marqueeStyles.transition_video));
       }
 
@@ -58,7 +60,7 @@ export const Screens = () => {
       setTimeout(() => {
         aboutVideo.style.opacity = `1`;
         transitionVideo.classList.add(clsx(marqueeStyles.hidden));
-      }, 800);
+      }, 700);
     }
 
     if (origin.index === 1) {
