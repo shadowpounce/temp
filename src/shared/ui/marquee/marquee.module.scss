@@ -58,6 +58,10 @@
 
   &.hidden {
     opacity: 0 !important;
+
+    img {
+      opacity: 0 !important;
+    }
   }
 }
 

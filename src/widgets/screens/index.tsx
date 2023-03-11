@@ -38,8 +38,6 @@ export const Screens = () => {
             item.classList.add(clsx(marqueeStyles.back));
           });
 
-        marqueeBox.style.transform = `translateY(0px)`;
-
         // return false;
 
         transitionVideo?.classList.add(clsx(marqueeStyles.transition_video));
@@ -48,6 +46,8 @@ export const Screens = () => {
       document.querySelectorAll<HTMLElement>(`.${marqueeStyles.marquee_item}`).forEach((video) => {
         if (video !== transitionVideo.closest('#transition-video')) {
           video.style.opacity = `0`;
+
+          transitionVideo.closest('#transition-video').querySelector('img').style.opacity = `0`;
 
           transitionVideo
             .closest('#transition-video')
