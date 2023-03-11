@@ -27,7 +27,7 @@
 
 .marquee_item {
   flex-shrink: 0;
-  transition: opacity 1.5s ease;
+  transition: opacity 0.2s ease;
 }
 
 .transition_video {
@@ -35,10 +35,14 @@
   right: 0 !important;
   transform-origin: center;
   z-index: 9999;
-  opacity: 1;
+  opacity: 1 !important;
 
   transition: all 1.5s ease !important;
   animation: transitionVideo 2s forwards ease;
+
+  &.hidden {
+    opacity: 0 !important;
+  }
 }
 
 @media (max-width: 1660px) {
@@ -47,15 +51,16 @@
       position: fixed;
       width: 100vw;
       height: 100vh;
-      transform: translateX(-80%) translateY(250px) rotate(28deg);
+      transform: translateX(-80%) translateY(250px) rotate(30deg);
     }
 
     100% {
       position: fixed;
       width: 100vw;
       height: 100vh;
-      transform: translateX(-80%) translateY(250px) rotate(28deg);
-      opacity: 1;
+      transform: translateX(-80%) translateY(250px) rotate(30deg);
+      // opacity: 0;
+      // z-index: -999;
     }
   }
 }
@@ -66,7 +71,7 @@
       position: fixed;
       width: 100vw;
       height: 100vh;
-      transform: translateX(-90%) translateY(600px) rotate(28deg);
+      transform: translateX(-90%) translateY(600px) rotate(30deg);
       // opacity: 1;
     }
 
@@ -74,8 +79,9 @@
       position: fixed;
       width: 100vw;
       height: 100vh;
-      transform: translateX(-90%) translateY(550px) rotate(28deg);
-      opacity: 1;
+      transform: translateX(-90%) translateY(550px) rotate(30deg);
+      // opacity: 0;
+      // z-index: -999;
     }
   }
 }

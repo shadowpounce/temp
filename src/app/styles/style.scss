@@ -55,8 +55,20 @@ body {
   z-index: 2;
 }
 
+#company #transition-video {
+  opacity: 1 !important;
+}
+
+#company #video {
+  opacity: 1 !important;
+}
+
 #hero {
   overflow: unset !important;
+}
+
+#newsletter .container {
+  padding-block: 90px !important;
 }
 
 @media (max-width: 1180px) {

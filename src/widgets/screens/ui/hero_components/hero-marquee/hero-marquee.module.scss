@@ -8,6 +8,7 @@
 }
 .marquee_item_container {
   padding-block: 8.35px;
+  transition: opacity 0.5s ease;
   video {
     // z-index: 1;
     // position: relative;

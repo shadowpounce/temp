@@ -1,4 +1,4 @@
-import { useRef, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 //Scenes
 import { About } from './ui/about/about';
 import { Company } from './ui/company/company';
@@ -12,6 +12,7 @@ import marqueeStyles from '../../shared/ui/marquee/marquee.module.scss';
 import aboutStyles from '../screens/ui/about/about.module.scss';
 import companyStyles from './ui/company/company.module.scss';
 import heroStyles from './ui/hero/hero.module.scss';
+import heroMarqueeStyles from './ui/hero_components/hero-marquee/hero-marquee.module.scss';
 
 interface Item {
   index: number;
@@ -19,6 +20,7 @@ interface Item {
 
 export const Screens = () => {
   const [servicesSection, setServicesSection] = useState(false);
+
   const onLeave = (origin: Item, destination: Item, direction: string) => {
     const transitionVideo = document.querySelector(`#transition-video video`) as HTMLElement;
     const aboutVideo = document.querySelector('#about-video') as HTMLVideoElement;
@@ -30,18 +32,25 @@ export const Screens = () => {
         transitionVideo?.classList.add(clsx(marqueeStyles.transition_video));
       }
 
-      document
-        .querySelectorAll<HTMLElement>(`.${marqueeStyles.marquee_item}`)
-        .forEach((video) => (video.style.opacity = `0`));
+      document.querySelectorAll<HTMLElement>(`.${marqueeStyles.marquee_item}`).forEach((video) => {
+        if (video !== transitionVideo.closest('#transition-video')) {
+          video.style.opacity = `0`;
+
+          transitionVideo
+            .closest('#transition-video')
+            .querySelectorAll<HTMLElement>(
+              `.${heroMarqueeStyles.marquee_item_container}`
+            )[1].style.opacity = `0`;
+        }
+      });
 
       setTimeout(() => {
         aboutVideo.style.opacity = `1`;
+        transitionVideo.classList.add(clsx(marqueeStyles.hidden));
       }, 800);
     }
 
     if (origin.index === 1) {
-      transitionVideo?.classList.remove(clsx(marqueeStyles.transition_video));
-
       if (direction === 'down') {
         aboutVideo.classList.remove(clsx(aboutStyles.toUp));
         aboutVideo.classList.add(clsx(aboutStyles.toDown));
