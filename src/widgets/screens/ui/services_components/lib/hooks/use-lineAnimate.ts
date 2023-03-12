@@ -26,7 +26,7 @@ export const useLineAnimate = (addPhase: PhaseAddType) => {
       let repeatCount = 2;
 
       let animation = animate({
-        duration: 1500,
+        duration: 1000,
         timing(fr) {
           return fr;
         },

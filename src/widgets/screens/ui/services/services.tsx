@@ -32,9 +32,9 @@ export const Services = ({ fullpage }) => {
       if (!animated) {
         runPhase('thumb')
           .runPhase('line')
-          .delay(2000)
+          .delay(1250)
           .runPhase('product1')
-          .delay(500)
+          .delay(400)
           .runPhase('product2');
         setAnimted(true);
       }
