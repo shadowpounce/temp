@@ -2,6 +2,7 @@
   width: 201px;
   height: 395px;
   border-radius: 16px;
+  position: relative;
 }
 .tiktok_video {
   position: relative;
@@ -11,7 +12,9 @@
   position: absolute;
   z-index: 2;
   left: 0;
-  height: 25%;
+  right: 0;
+  bottom: 0;
+  // height: 25%;
   top: 0;
   pointer-events: none;
 }

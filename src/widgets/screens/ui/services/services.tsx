@@ -34,7 +34,7 @@ export const Services = ({ fullpage }) => {
           .runPhase('line')
           .delay(2000)
           .runPhase('product1')
-          .delay(2150)
+          .delay(500)
           .runPhase('product2');
         setAnimted(true);
       }

@@ -7,8 +7,6 @@ interface TiktokFrameProps {
 }
 
 export const TiktokFrame: React.FC<TiktokFrameProps> = ({ videoSrc }) => {
-
-
   return (
     <div className={styles.tiktok}>
       <video

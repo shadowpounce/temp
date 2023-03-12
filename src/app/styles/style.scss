@@ -59,6 +59,13 @@ body {
   opacity: 1 !important;
 }
 
+#services .fp-overflow {
+  overflow: hidden !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 #company #video {
   opacity: 1 !important;
 }
