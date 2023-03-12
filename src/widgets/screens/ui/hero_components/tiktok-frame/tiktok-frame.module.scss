@@ -11,10 +11,11 @@
   position: absolute;
   z-index: 2;
   left: 0;
+  height: 25%;
   top: 0;
   pointer-events: none;
 }
-@media (max-width: $laptop){
+@media (max-width: $laptop) {
   .tiktok {
     width: calcSize(201px, 80);
     height: calcSize(395px, 80);
