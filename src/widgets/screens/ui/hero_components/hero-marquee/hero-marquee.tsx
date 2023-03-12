@@ -18,23 +18,35 @@ export const HeroMarquee: React.FC<HeroMarqueeProps> = ({ className }) => {
           <TiktokFrame videoSrc="/video/hero/v-1.mp4" />
         </div>
         <div className={styles.marquee_item_container}>
-          <TiktokFrame videoSrc="/video/hero/v-2.mp4" />
+          <TiktokFrame videoSrc="/video/hero/v-3.mp4" />
         </div>
       </Marquee>
-      <Marquee scaler={2.3} direction="up" duration={14000} className={styles.marquee_item}>
+      <Marquee scaler={2.3} direction="up" duration={18000} className={styles.marquee_item}>
         <div className={styles.marquee_item_container}>
-          <InstagramFrame videoSrc="/video/hero/v-1.mp4" />
+          <InstagramFrame videoSrc="/video/hero/v-4.mp4" />
         </div>
         <div className={styles.marquee_item_container}>
-          <InstagramFrame videoSrc="/video/hero/v-2.mp4" />
+          <InstagramFrame videoSrc="/video/hero/v-5.mp4" />
+        </div>
+        <div className={styles.marquee_item_container}>
+          <InstagramFrame videoSrc="/video/hero/v-8.mp4" />
+        </div>
+        <div className={styles.marquee_item_container}>
+          <TiktokFrame videoSrc="/video/hero/v-11.mp4" />
         </div>
       </Marquee>
-      <Marquee scaler={2.3} duration={14000} className={styles.marquee_item}>
+      <Marquee scaler={2.3} duration={18000} className={styles.marquee_item}>
         <div className={styles.marquee_item_container}>
-          <TiktokFrame videoSrc="/video/hero/v-1.mp4" />
+          <TiktokFrame videoSrc="/video/hero/v-6.mp4" />
         </div>
         <div className={styles.marquee_item_container}>
-          <TiktokFrame videoSrc="/video/hero/v-2.mp4" />
+          <TiktokFrame videoSrc="/video/hero/v-7.mp4" />
+        </div>
+        <div className={styles.marquee_item_container}>
+          <InstagramFrame videoSrc="/video/hero/v-9.mp4" />
+        </div>
+        <div className={styles.marquee_item_container}>
+          <TiktokFrame videoSrc="/video/hero/v-10.mp4" />
         </div>
       </Marquee>
     </div>

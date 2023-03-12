@@ -24,6 +24,7 @@ export const Screens = () => {
   const onLeave = (origin: Item, destination: Item, direction: string) => {
     const transitionVideo = document.querySelector(`#transition-video video`) as HTMLElement;
     const marqueeBox = transitionVideo.closest('#transition-video') as HTMLElement;
+
     const aboutVideo = document.querySelector('#about-video') as HTMLVideoElement;
     const deviceFrame = document.querySelector('#device') as HTMLElement;
 
@@ -38,9 +39,9 @@ export const Screens = () => {
             item.classList.add(clsx(marqueeStyles.back));
           });
 
-        // return false;
-
-        transitionVideo?.classList.add(clsx(marqueeStyles.transition_video));
+        setTimeout(() => {
+          transitionVideo?.classList.add(clsx(marqueeStyles.transition_video));
+        }, 200);
       }
 
       document.querySelectorAll<HTMLElement>(`.${marqueeStyles.marquee_item}`).forEach((video) => {
@@ -60,13 +61,14 @@ export const Screens = () => {
       setTimeout(() => {
         aboutVideo.style.opacity = `1`;
         transitionVideo.classList.add(clsx(marqueeStyles.hidden));
-      }, 700);
+      }, 1000);
     }
 
     if (origin.index === 1) {
       if (direction === 'down') {
         aboutVideo.classList.remove(clsx(aboutStyles.toUp));
         aboutVideo.classList.add(clsx(aboutStyles.toDown));
+        deviceFrame.classList.add(clsx(companyStyles.visible));
       }
     }
 
@@ -97,13 +99,10 @@ export const Screens = () => {
           setServicesSection(true);
         }
         if (window.fullpage_api.getActiveSection().item.id === `company`) {
-          const deviceFrame = document.querySelector('#device') as HTMLElement;
           const aboutVideo = document.querySelector('#about-video') as HTMLVideoElement;
-          console.log(deviceFrame);
 
           aboutVideo.classList.remove(clsx(aboutStyles.toUp));
           aboutVideo.classList.add(clsx(aboutStyles.toDown));
-          deviceFrame.classList.add(clsx(companyStyles.visible));
         }
         const video = document.querySelector('#about-video') as HTMLVideoElement;
         video.play();
