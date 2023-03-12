@@ -15,7 +15,7 @@ export function useProductAnimate(
   };
 
   const update = () => {
-    const centerX = window.innerWidth / 1.5;
+    const centerX = window.innerWidth / 1.48;
     for (let element of elements.current) {
       const coords = element.getBoundingClientRect();
       const centerEl = coords.left + coords.width / 2;

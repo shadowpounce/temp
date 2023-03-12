@@ -26,6 +26,13 @@ export const Company: React.FC = () => {
               <p
                 className={styles.company_marquee_item}
                 key={company.name}
+                style={
+                  company.name === `Ali Express`
+                    ? {
+                        padding: `0 20px`,
+                      }
+                    : {}
+                }
                 data-company={company.name}
               >
                 {company.name}
