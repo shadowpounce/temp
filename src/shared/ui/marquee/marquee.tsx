@@ -18,7 +18,7 @@ const Marquee: React.FC<MarqueeProps> = ({
   scaler = 2,
   className,
 }) => {
-  const [repeatCount, setRepeatCount] = useState(2);
+  const [repeatCount, setRepeatCount] = useState(1);
   const marqueeRef = useRef<HTMLDivElement>(null);
 
   const handleCalcWidth = () => {
