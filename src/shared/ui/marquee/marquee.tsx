@@ -39,14 +39,14 @@ const Marquee: React.FC<MarqueeProps> = ({
       if (marquee.offsetHeight >= parentHeight) return;
 
       const newStep = Math.ceil(parentHeight / marqueeChild.offsetHeight);
-      setRepeatCount(Math.max(2, newStep));
+      setRepeatCount(Math.max(1, newStep));
       return;
     }
     if (direction === 'left' || direction === 'right') {
       if (marquee.offsetWidth >= parentWidth) return;
 
       const newStep = Math.ceil(parentWidth / marqueeChild.offsetWidth);
-      setRepeatCount(Math.max(2, newStep));
+      setRepeatCount(Math.max(1, newStep));
       return;
     }
   };

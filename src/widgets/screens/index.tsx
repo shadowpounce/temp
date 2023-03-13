@@ -100,10 +100,16 @@ export const Screens = () => {
             setServicesSection(true);
           }
           if (window.fullpage_api.getActiveSection().item.id === `company`) {
+            const deviceFrame = document.querySelector('#device') as HTMLElement;
+
             const aboutVideo = document.querySelector('#about-video') as HTMLVideoElement;
 
             aboutVideo.classList.remove(clsx(aboutStyles.toUp));
             aboutVideo.classList.add(clsx(aboutStyles.toDown));
+
+            if (!deviceFrame.classList.contains(clsx(companyStyles.visible))) {
+              deviceFrame.classList.add(clsx(companyStyles.visible));
+            }
           }
           const video = document.querySelector('#about-video') as HTMLVideoElement;
           video.play();
@@ -126,6 +132,7 @@ export const Screens = () => {
                 muted
                 loop
               />
+
               <Services fullpage={servicesSection} />
               <Newsletter />
             </ReactFullpage.Wrapper>
