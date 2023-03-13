@@ -126,7 +126,7 @@ export const Screens = () => {
               <video
                 className={`img-cover ${aboutStyles.about_video}`}
                 id="about-video"
-                src="/video/hero/v-1.webm"
+                src="/video/hero/v-1.mp4"
                 playsInline
                 autoPlay
                 muted
